@@ -1,0 +1,13 @@
+[Unit]
+# Human readable name of the unit
+Description=LaserDB-FlaskConfig: preventing double laser marks since February 2022
+
+[Service]
+# Command to execute when the service is started
+WorkingDirectory= /opt/LaserDB-FlaskConfig/
+ExecStart=python3 /opt/LaserDB-FlaskConfig/app.py
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=default.target
